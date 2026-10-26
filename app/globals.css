@@ -263,7 +263,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin: 0;
+  margin-block: 0;
   padding: 1.15rem 0;
   list-style: none;
   font-size: 0.98rem;
@@ -384,7 +384,7 @@ a {
 }
 
 .quote-band blockquote {
-  margin: 0;
+  margin-block: 0;
   padding: 4rem 0;
   text-align: center;
 }
