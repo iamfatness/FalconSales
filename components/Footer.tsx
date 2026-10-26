@@ -11,6 +11,9 @@ export default function Footer() {
         <p>
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </p>
+        <p>
+          <a href="/faq">FAQ</a>
+        </p>
       </div>
     </footer>
   );
