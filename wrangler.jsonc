@@ -1,0 +1,16 @@
+{
+  "name": "falconsales-website",
+  "compatibility_date": "2026-06-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "falconsales.iamfatness.us",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
