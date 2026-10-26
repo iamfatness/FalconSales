@@ -267,6 +267,7 @@ a {
   padding: 1.15rem 0;
   list-style: none;
   font-size: 0.98rem;
+  text-align: center;
 }
 
 .section {
@@ -385,11 +386,12 @@ a {
 .quote-band blockquote {
   margin: 0;
   padding: 4rem 0;
+  text-align: center;
 }
 
 .quote-band p {
   max-width: 36rem;
-  margin: 0;
+  margin: 0 auto;
   font-family: var(--font-display), sans-serif;
   font-size: clamp(1.7rem, 3vw, 2.5rem);
   font-weight: 500;
