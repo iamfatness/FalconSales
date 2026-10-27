@@ -171,21 +171,90 @@ a {
   color: var(--red);
 }
 
-/* Nav links collapse below 800px; phone and request stay in the bar. */
+/* Nav links collapse below 800px. Logo and Menu share the top row.
+   On a phone, the phone number and the request button each take a full
+   row so their edges match. From 480px up they share the second row,
+   with the button's right edge under Menu. */
 @media (max-width: 799px) {
+  .header-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 0.75rem;
+    row-gap: 0.7rem;
+  }
+
+  .header-tools {
+    display: contents;
+  }
+
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .mark {
+    width: 2.8rem;
+    height: 2.6rem;
+  }
+
+  .wordmark {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
   .menu-button {
     display: inline-flex;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .header-phone {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .header-tools .button {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 100%;
+    white-space: nowrap;
   }
 
   .site-nav {
     display: none;
+    grid-column: 1 / -1;
+    grid-row: 4;
     flex-direction: column;
+    align-items: flex-start;
     gap: 0.75rem;
-    padding: 0.35rem 0 0.9rem;
+    padding: 0.15rem 0 0.85rem;
   }
 
   .site-nav.is-open {
     display: flex;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 799px) {
+  .header-phone {
+    grid-column: 1;
+    width: auto;
+  }
+
+  .header-tools .button {
+    grid-column: 2;
+    grid-row: 2;
+    width: auto;
+    justify-self: end;
+  }
+
+  .site-nav {
+    grid-row: 3;
   }
 }
 
